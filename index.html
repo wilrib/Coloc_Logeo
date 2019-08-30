@@ -9,9 +9,11 @@
     <meta name="author" content="">
     <title>Coloc Logeo</title>
     <link href="./style.css" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-    </script>
+    </script> -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
     </script>
@@ -50,13 +52,13 @@
             }, false);
         });
 
-        jQuery(document).ready(function () {
-            jQuery('#slideMe').hide();
-            jQuery('a#clickMe').click(function () {
-                jQuery('#slideMe').slideToggle(400);
-                return false;
-            });
-        });
+        // jQuery(document).ready(function () {
+        //     jQuery('#slideMe').hide();
+        //     jQuery('a#clickMe').click(function () {
+        //         jQuery('#slideMe').slideToggle(400);
+        //         return false;
+        //     });
+        // });
         jQuery(document).ready(function () {
             jQuery('#slideMe2').hide();
             jQuery('a#clickMe2').click(function () {
@@ -171,8 +173,12 @@
 
                             <h2> Dans chaque chambre</h2>
 
-                            <figure class="wp-block-image"><img src="./img/Image_003.png" alt="" class="wp-image-272"
-                                    width="512" height="486" /></figure>
+                            <div class="chaque-chambre">
+                                <figure class="wp-block-image"><img src="./img/Image_033.png" alt=""
+                                        class="wp-image-272" width="512" height="486" /></figure>
+                                <figure class="wp-block-image"><img src="./img/Image_034.png" alt=""
+                                        class="wp-image-272" width="512" height="486" /></figure>
+                            </div>
 
                             <h2>Dans les parties communes</h2>
 
@@ -202,22 +208,22 @@
                             <div class="container">
                                 <div class="row">
                                     <a href="./img/Image_008.jpg" data-toggle="lightbox" data-gallery="gallery"
-                                        class="col-md-4">
-                                        <img src="./img/Image_008.jpg" class="img-fluid rounded">
+                                        class="col-md-6">
+                                        <img src="./img/miniature/Image_008.jpg" class="img-fluid rounded">
                                     </a>
                                     <a href="./img/Image_006.jpg" data-toggle="lightbox" data-gallery="gallery"
-                                        class="col-md-4">
-                                        <img src="./img/Image_006.jpg" class="img-fluid rounded">
+                                        class="col-md-6">
+                                        <img src="./img/miniature/Image_006.jpg" class="img-fluid rounded">
                                     </a>
                                 </div>
                                 <div class="row">
                                     <a href="./img/Image_009.jpg" data-toggle="lightbox" data-gallery="gallery"
-                                        class="col-md-4">
-                                        <img src="./img/Image_009.jpg" class="img-fluid rounded">
+                                        class="col-md-6">
+                                        <img src="./img/miniature/Image_009.jpg" class="img-fluid rounded">
                                     </a>
                                     <a href="./img/Image_010.jpg" data-toggle="lightbox" data-gallery="gallery"
-                                        class="col-md-4">
-                                        <img src="./img/Image_010.jpg" class="img-fluid rounded">
+                                        class="col-md-6">
+                                        <img src="./img/miniature/Image_010.jpg" class="img-fluid rounded">
                                     </a>
                                 </div>
                             </div>

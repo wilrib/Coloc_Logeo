@@ -69,7 +69,7 @@ img#logo {
 }
 
 .wp-block-image img {
-    max-width: 100%;
+    width: 94%;
     height: auto;
     transition: .3s ease all;
     margin-left: 35px;
@@ -97,6 +97,11 @@ img#logo {
 
 .mention-legale {
     margin-bottom: 40px;
+}
+
+.chaque-chambre {
+    display: flex;
+    flex-direction: row;
 }
 
 /* Formulaire */
@@ -248,6 +253,11 @@ button:hover {
     margin-bottom: 25px;
 }
 
+/* #gallery-img {
+    height: 19vw;
+    overflow: hidden;
+} */
+
 /* Footer */
 .blog-footer {
     background-color: #003f7a;
@@ -267,6 +277,11 @@ button:hover {
 
     .bg-zoom {
         height: 50vh;
+    }
+
+    .chaque-chambre {
+        display: flex;
+        flex-direction: column;
     }
 
     img#logo {
@@ -299,6 +314,7 @@ button:hover {
         width: 100%;
         height: auto;
         transition: .3s ease all;
+            margin-left: 0px;
     }
 
     .content_map {

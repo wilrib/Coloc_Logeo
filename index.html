@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Coloc Logeo</title>
+    <link href="./style.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.js"></script>
+    <script>
+        $(document).on("click", '[data-toggle="lightbox"]', function (event) {
+            event.preventDefault();
+            $(this).ekkoLightbox();
+        });
+
+        jQuery(document).ready(function () {
+            var yourIframe = document.getElementById('your-iframe');
+            var iframeLoader = document.getElementById('iframe-placeholder');
+            var iframeSrc = 'https://www.lookin3d.fr/visite-virtuelle/logeo-10-allee-davranches/fullscreen/'
+
+            iframeLoader.addEventListener('click', function () {
+                yourIframe.src = iframeSrc;
+                iframeLoader.parentNode.removeChild(iframeLoader);
+            }, false);
+        });
+
+        jQuery(document).ready(function () {
+            var yourIframe = document.getElementById('your-iframe-2');
+            var iframeLoader = document.getElementById('iframe-placeholder-2');
+            var iframeSrc = 'https://www.lookin3d.fr/visite-virtuelle/logeo-27-rue-amiral-courbet/fullscreen/'
+
+            iframeLoader.addEventListener('click', function () {
+                yourIframe.src = iframeSrc;
+                iframeLoader.parentNode.removeChild(iframeLoader);
+            }, false);
+        });
+
+        jQuery(document).ready(function () {
+            jQuery('#slideMe').hide();
+            jQuery('a#clickMe').click(function () {
+                jQuery('#slideMe').slideToggle(400);
+                return false;
+            });
+        });
+        jQuery(document).ready(function () {
+            jQuery('#slideMe2').hide();
+            jQuery('a#clickMe2').click(function () {
+                jQuery('#slideMe2').slideToggle(400);
+                return false;
+            });
+        });
+
+        jQuery(document).ready(function () {
+            var $animation_elements = jQuery('.animation-element');
+            var $window = jQuery(window);
+
+            function check_if_in_view() {
+                var window_height = $window.height();
+                var window_top_position = $window.scrollTop();
+                var window_bottom_position = (window_top_position + window_height);
+
+                jQuery.each($animation_elements, function () {
+                    var $element = jQuery(this);
+                    var element_height = $element.outerHeight();
+                    var element_top_position = $element.offset().top;
+                    var element_bottom_position = (element_top_position + element_height);
+
+                    //check to see if this current container is within viewport
+                    if ((element_bottom_position >= window_top_position) &&
+                        (element_top_position <= window_bottom_position)) {
+                        $element.addClass('in-view');
+                    } else {
+                        $element.removeClass('in-view');
+                    }
+                });
+            }
+            $window.on('scroll resize', check_if_in_view);
+            $window.trigger('scroll');
+        });
+    </script>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="bg-zoom row">
+            <div class="" id="background_img"></div>
+            <img id="logo" src="./img/Logo-final-Fond-jaune-1-1.png" alt="">
+        </div>
+        <div class="row">
+            <div class="col-sm-12 blog-main">
+                <div class="blog-post">
+
+                    <div class="content_map">
+
+                        <figure class="wp-block-image is-resized"><img src="./img/Image_002.png" alt=""
+                                class="wp-image-271" />
+                        </figure>
+
+                    </div>
+
+                    <div class="cf">
+                        <div class="animation-element slide-left titre_bleu">
+                            <h1>Une offre unique en Normandie</h1>
+                        </div>
+                    </div>
+
+                    <div class="cf">
+                        <div class="animation-element slide-left content_text">
+
+                            <p><strong>Vous rêvez d’un logement de qualité, tout équipé et proche de toutes les
+                                    commodités&nbsp;?</strong></p>
+
+                            <p>Découvrez notre offre colocation clé en main&nbsp;<strong>à partir de 140€* par
+                                    mois&nbsp;</strong>(prix indiqué pour un T4, loyer mensuel moyen charges comprises,
+                                APL déduites, aucun frais d'agence, par personne) !</p>
+
+                            <p>Que vous soyez étudiant, jeune actif, apprenti ou en mutation professionnelle, bénéficiez
+                                d'un logement meublé avec soin&nbsp;<strong>au Havre, à Caen ou à Rouen&nbsp;</strong>!
+                            </p>
+
+                            <p>Du&nbsp;<strong>T3 au T5</strong>, toutes nos colocations sont proches des transports en
+                                commun et des commerces.</p>
+
+                        </div>
+                    </div>
+
+                    <div class="cf">
+                        <div class="animation-element slide-left titre_bleu">
+                            <h1>Une offre vraiment tout compris !</h1>
+                        </div>
+                    </div>
+
+                    <div class="cf">
+                        <div class="animation-element slide-left content_text">
+
+                            <p>Le prix indiqué comprend tout. Pas de mauvaise surprise, rien à ajouter :</p>
+
+                            <ul>
+                                <li>Eau</li>
+                                <li>Electricité</li>
+                                <li>Chauffage</li>
+                                <li>Assurance habitation</li>
+                                <li>Internet haut débit</li>
+                            </ul>
+
+                        </div>
+                    </div>
+                    <div class="cf">
+                        <div class="animation-element slide-left titre_bleu">
+                            <h1>Un appartement meublé et équipé</h1>
+                        </div>
+                    </div>
+
+                    <div class="cf">
+                        <div class="animation-element slide-left content_text">
+
+                            <h2> Dans chaque chambre</h2>
+
+                            <figure class="wp-block-image"><img src="./img/Image_003.png" alt="" class="wp-image-272"
+                                    width="512" height="486" /></figure>
+
+                            <h2>Dans les parties communes</h2>
+
+                            <figure class="wp-block-image"><img src="./img/Image_004.png" alt="" class="wp-image-273"
+                                    width="1024" height="410" /></figure>
+
+                            <h2>Nos équipes à votre <strong>écoute</strong></h2>
+
+                            <p>En choisissant notre offre colocation, vous bénéficiez d’un accompagnement
+                                personnalisé dans vos démarches administratives liées à votre logement. Un souci ?
+                                Une question ? Nos agences sont à votre entière disposition !</p>
+
+                            <div style="height:20px" aria-hidden="true" class="wp-block-spacer"></div>
+
+                            <h2>Un contrat <strong>sécurisé</strong></h2>
+
+                            <p>Une charte de la colocation est signée au préalable et engage les colocataires à
+                                respecter les règles qu'elle contient, pour le bien-être et la tranquillité de chacun.
+                            </p>
+
+                            <p>Pas d’engagement de durée.</p>
+
+                            <div style="height:20px" aria-hidden="true" class="wp-block-spacer"></div>
+
+                            <h2>Deux styles de <strong>décoration</strong></h2>
+
+                            <div class="container">
+                                <div class="row">
+                                    <a href="./img/Image_008.jpg" data-toggle="lightbox" data-gallery="gallery"
+                                        class="col-md-4">
+                                        <img src="./img/Image_008.jpg" class="img-fluid rounded">
+                                    </a>
+                                    <a href="./img/Image_006.jpg" data-toggle="lightbox" data-gallery="gallery"
+                                        class="col-md-4">
+                                        <img src="./img/Image_006.jpg" class="img-fluid rounded">
+                                    </a>
+                                </div>
+                                <div class="row">
+                                    <a href="./img/Image_009.jpg" data-toggle="lightbox" data-gallery="gallery"
+                                        class="col-md-4">
+                                        <img src="./img/Image_009.jpg" class="img-fluid rounded">
+                                    </a>
+                                    <a href="./img/Image_010.jpg" data-toggle="lightbox" data-gallery="gallery"
+                                        class="col-md-4">
+                                        <img src="./img/Image_010.jpg" class="img-fluid rounded">
+                                    </a>
+                                </div>
+                            </div>
+
+                            <p class="address_italic"><em>Colocation de la Tour Réservoir - 8,10 allée d'Avranches,
+                                    76600 Le Havre</em></p>
+
+                            <div class="container">
+                                <div class="row">
+                                    <a href="./img/Image_011.jpg" data-toggle="lightbox" data-gallery="gallery"
+                                        class="col-md-6">
+                                        <img src="./img/Image_011.jpg" class="img-fluid rounded">
+                                    </a>
+                                    <a href="./img/Image_012.jpg" data-toggle="lightbox" data-gallery="gallery"
+                                        class="col-md-6">
+                                        <img src="./img/Image_012.jpg" class="img-fluid rounded">
+                                    </a>
+                                </div>
+                                <div class="row">
+                                    <a href="./img/Image_013.jpg" data-toggle="lightbox" data-gallery="gallery"
+                                        class="col-md-6">
+                                        <img src="./img/Image_013.jpg" class="img-fluid rounded">
+                                    </a>
+                                    <a href="./img/Image_014.jpg" data-toggle="lightbox" data-gallery="gallery"
+                                        class="col-md-6">
+                                        <img src="./img/Image_014.jpg" class="img-fluid rounded">
+                                    </a>
+                                </div>
+                            </div>
+
+                            <p class="address_italic"><em>Colocation Amiral Courbet - 27 rue Amiral Courbet, 76600 Le
+                                    Havre</em></p>
+
+                        </div>
+                    </div>
+
+                    <div class="cf">
+                        <div class="animation-element slide-left titre_bleu">
+                            <h1>Nos colocations</h1>
+                        </div>
+                    </div>
+
+                    <div class="cf">
+                        <div class="animation-element slide-left content_map">
+
+                            <iframe src="https://www.google.com/maps/d/embed?mid=17fD00qVqr--bB9WJIO9O2p6lFmnTApQx"
+                                frameborder="0" style="width:100%; height:500px"></iframe>
+
+                            <figure class="wp-block-image is-resized"><img src="./img/Image_015.png" alt=""
+                                    class="wp-image-274" width="448" height="117" /></figure>
+                            <p class="address_italic mention-map"><em>*Prix indiqué : loyer mensuel charges comprises,
+                                    APL
+                                    déduites,
+                                    par personne</em></p>
+                        </div>
+                    </div>
+
+                    <div class="cf">
+                        <div class="animation-element slide-left titre_bleu">
+                            <h1>Visitez nos colocations</h1>
+                        </div>
+                    </div>
+
+                    <div class="cf">
+                        <div class="animation-element slide-left content_map">
+
+                            <div id="iframe-wrapper">
+                                <div id="iframe-placeholder">
+                                    <img id="iframe-img" src="./img/visite_2-min.png" alt="">
+                                </div>
+                                <iframe id="your-iframe" src=""></iframe>
+                            </div>
+
+                            <div id="iframe-wrapper-2">
+                                <div id="iframe-placeholder-2">
+                                    <img id="iframe-img-2" src="./img/visite_1-min.png" alt="">
+                                </div>
+                                <iframe id="your-iframe-2" src=""></iframe>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="cf">
+                        <div class="animation-element slide-left titre_bleu">
+                            <h1>Pour plus d'informations</h1>
+                        </div>
+                    </div>
+
+                    <div class="cf">
+                        <div class="animation-element slide-left content_text mention-legale">
+
+                            <h4>Remplissez les champs ci-dessous, nous traiterons votre demande dans les meilleurs
+                                délais.</h4>
+                            <div class="form-rgpd">
+                                <div class="formulaire">
+                                    <form method="post">
+                                        <label>Nom :</label><br>
+                                        <input name="nom" type="text" required><br>
+
+                                        <label>Prénom :</label><br>
+                                        <input name="prenom" type="text" required><br>
+
+                                        <label>Téléphone :</label><br>
+                                        <input name="telephone" type="text"><br>
+
+                                        <label>Mail :</label><br>
+                                        <input name="mail" type="email" required><br>
+
+                                        <label>Votre demande :</label> <br>
+                                        <input name="choix_1" type="checkbox" id="">Demande de colocation <br>
+                                        <input name="choix_2" type="checkbox" id="">Demande de renseignements <br>
+                                        <input name="choix_3" type="checkbox" id="">Demande de rendez-vous <br> <br>
+
+                                        <label>Détails de votre demande :</label> <br>
+                                        <textarea name="message" id="" cols="30" rows="5"></textarea><br>
+
+                                        <label>Questions :</label><br>
+                                        <input name="questions" type="text"><br><br>
+
+                                        <button type="submit">Envoyer</button>
+                                    </form>
+                                    <!-- <?php
+                            if (isset($_POST['message'])) {
+                                $position_arobase = strpos($_POST['mail'], '@');
+                                if ($position_arobase === false)
+                                    echo '<p>Votre email doit comporter un arobase.</p>';
+                                else {
+                                    $retour = mail('contact@williamribeiro.fr', 'Envoi depuis page Contact', $_POST['message'] . $_POST['prenom'] . $_POST['choix_1'], 'From : ' . $_POST['mail']);
+                                    if ($retour)
+                                        echo '<p>Votre message a été envoyé.</p>';
+                                    else
+                                        echo '<p>Erreur.</p>';
+                                }
+                            }
+                            ?> -->
+                                </div>
+
+                                <div id="RGPD">
+                                    <p>
+                                        <br />
+                                        En cliquant sur « Envoyer » à la fin de ce formulaire, vous acceptez le
+                                        traitement
+                                        des données personnelles qui y sont contenues. Ainsi, Logeo Seine Estuaire, 139
+                                        cours de la république 76600 LE HAVRE met en œuvre un traitement des données
+                                        vous
+                                        concernant dans le cadre de la prospection commerciale pour son offre de
+                                        colocation.
+                                        Ces données (nom, prénom, adresse électronique et détails de la demande de
+                                        renseignements) sont destinées au personnel habilité de Logeo Seine Estuaire.
+                                        Elles
+                                        seront conservées pendant trois ans à compter de la fin de la relation
+                                        commerciale
+                                        (classement sans suite, dernière proposition). Ce traitement est fondé sur le
+                                        recueil de votre consentement afin de recevoir des informations sur l’offre de
+                                        logements en colocation de Logeo Seine Estuaire.
+                                        <br /><br />
+                                        Conformément aux dispositions de la loi 78-17 du 6 janvier 1978 et du règlement
+                                        européen en matière de protection des données à caractère personnel, dans les
+                                        conditions définies par les dispositions précitées, vous disposez d’un droit
+                                        d’accès, de rectification, d’effacement de vos données à caractère personnel, à
+                                        la
+                                        limitation du traitement ainsi que d’un droit d’opposition. En cas d’exercice
+                                        d’un
+                                        tel droit d’opposition, l’organisme veillera à ne plus traiter les données à
+                                        caractère personnel dans le cadre du traitement concerné. Par ailleurs, vous
+                                        disposez également du droit de définir des directives relatives à la
+                                        conservation, à
+                                        l’effacement et à la communication de vos données à caractère personnel après
+                                        votre
+                                        décès. La communication des directives spécifiques post-mortem et l’exercice des
+                                        droits peuvent être exercés par courrier électronique à l’adresse suivante :
+                                        <br /> donneespersonnelles@logeo.fr ou par courrier postal adressé au délégué à
+                                        la
+                                        protection des données Logeo Seine Estuaire, 139 Cours de la République – 76600
+                                        LE
+                                        HAVRE (sous réserve de joindre un justificatif d’identité à sa demande). Lorsque
+                                        vous adressez une demande d’exercice de droit, vous devez vous identifier par
+                                        tout
+                                        moyen. En cas de doute sur votre identité, le responsable du traitement pourra
+                                        demander des informations supplémentaires apparaissant nécessaires, y compris la
+                                        photocopie d’un titre d’identité portant la signature de la personne concernée.
+                                        Vous
+                                        avez également la possibilité d’introduire une réclamation auprès de la Cnil à
+                                        l’adresse suivante : 3 Place Fontenoy – TSA 80715 – 75334 PARIS CEDEX 07
+                                </div>
+                            </div>
+
+                            <figure class="wp-block-image"><img src="./img/Image_018.png" alt="" class="wp-image-276"
+                                    width="256" height="99" /></figure>
+
+                            <a href="#" id="clickMe2">Consulter les mentions légales</a>
+                            <div id="slideMe2">
+                                <p>
+                                    <br>
+                                    Site Internet : http://coloc.logeo.fr
+                                    <br><br>
+                                    Le présent site Internet est la propriété de Logeo Seine Estuaire, Société
+                                    Anonyme
+                                    d’HLM à directoire et
+                                    conseil de surveillance au capital de 14.776.640,00 Euros, dont le siège
+                                    social est
+                                    situé 139 Cours de
+                                    la République, 76600 Le Havre, inscrite au RCS du HAVRE sous le numéro 367
+                                    500 89 -
+                                    N° TVA
+                                    intracommunautaire : FR 30 367500899.
+                                    <br><br>
+                                    Ce site internet est publié par Logeo Seine Estuaire.
+                                    <br><br>
+                                    Directeur de publication : Mathias Levy-Noguères en qualité de Président du
+                                    Directoire Responsable de
+                                    publication : Direction Numérique / Logeo Seine Estuaire
+                                    <br><br>
+                                    Editeur : Logeo Seine Estuaire 139 cours de la République – 76600 LE HAVRE
+                                    Tél. :
+                                    02.32.74.27.80
+                                    contact@logeo.fr
+                                    <br><br>
+                                    Hébergeur : BSO Network Solutions, 4 Avenue Pablo Picasso, 92000 Nanterre
+                                    France
+                                    <br><br>
+                                    Propriété intellectuelle :
+                                    <br><br>
+                                    Tous les éléments du présent site Internet (textes, images animées ou non,
+                                    sons,
+                                    savoir-faire, œuvres,
+                                    dessins, graphismes etc…) sont la propriété de Logeo Seine Estuaire et sont
+                                    à ce
+                                    titre protégés par les
+                                    lois françaises et les textes internationaux relatifs au respect des droits
+                                    d'auteur
+                                    et du copyright.
+                                    <br><br>
+                                    La reproduction et/ou la représentation totale ou partielle de ces éléments
+                                    n'est
+                                    possible qu'avec
+                                    l'autorisation préalable de l'auteur. Les liens hypertextes vers toute page
+                                    du site
+                                    sont autorisés. Il
+                                    est cependant souhaitable d'en avertir l'auteur.
+                                    <br><br>
+                                    Les bases de données figurant le cas échéant sur le site Internet sont
+                                    protégées par
+                                    les dispositions du
+                                    code de la propriété intellectuelle et du droit relatif à la protection
+                                    juridique
+                                    des bases de données.
+                                    <br><br>
+                                    Les autres signes distinctifs, notamment les dénominations sociales, noms
+                                    commerciaux, enseignes, noms
+                                    de domaines reproduits sur le site sont la propriété de Logeo Seine Estuaire
+                                    ou de
+                                    tiers. Toute
+                                    reproduction sans autorisation est susceptible de constituer une usurpation
+                                    engageant la responsabilité
+                                    de son auteur en application de l’article 1382 du code civil.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="blog-footer">
+        <p>Par <a href="http://www.williamribeiro.fr/">Wilrib</a>.</p>
+    </footer>
+</body>
+
+</html>

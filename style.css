@@ -108,7 +108,6 @@ img#logo {
     width: 50%;
     height: auto;
     transition: .3s ease all;
-    /* margin-left: 35px; */
 }
 
 .wp-block-image-footer {
@@ -231,7 +230,6 @@ button:hover {
 }
 
 /*Animation dynamique*/
-
 .animation-element {
     opacity: 0;
     position: relative;
@@ -263,11 +261,6 @@ button:hover {
 .rounded {
     margin-bottom: 25px;
 }
-
-/* #gallery-img {
-    height: 19vw;
-    overflow: hidden;
-} */
 
 /* Footer */
 .blog-footer {
@@ -306,12 +299,13 @@ button:hover {
     .titre_bleu {
         text-align: left;
         transition: .3s ease all;
-        width: auto;
+        width: fit-content;
     }
 
     .titre_bleu h1 {
         margin-left: 0vw;
         transition: .3s ease all;
+        font-size: 2rem;
     }
 
     .content_text {
@@ -321,7 +315,6 @@ button:hover {
     }
 
     .wp-block-image img {
-        /* max-width: inherit; */
         width: 100%;
         height: auto;
         transition: .3s ease all;
@@ -332,7 +325,6 @@ button:hover {
         width: 50%;
         height: auto;
         transition: .3s ease all;
-        /* margin-left: 35px; */
     }
 
     .content_map {
@@ -352,5 +344,9 @@ button:hover {
     .form-rgpd {
         display: flex;
         flex-direction: column-reverse;
+    }
+
+    #RGPD {
+        margin-left: 0;
     }
 }

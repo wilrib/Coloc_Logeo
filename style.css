@@ -104,6 +104,17 @@ img#logo {
     flex-direction: row;
 }
 
+.wp-block-image-footer img {
+    width: 50%;
+    height: auto;
+    transition: .3s ease all;
+    /* margin-left: 35px; */
+}
+
+.wp-block-image-footer {
+    text-align: center
+}
+
 /* Formulaire */
 span.wpcf7-form-control.wpcf7-radio {
     display: flex;
@@ -314,7 +325,14 @@ button:hover {
         width: 100%;
         height: auto;
         transition: .3s ease all;
-            margin-left: 0px;
+        margin-left: 0px;
+    }
+
+    .wp-block-image-footer img {
+        width: 50%;
+        height: auto;
+        transition: .3s ease all;
+        /* margin-left: 35px; */
     }
 
     .content_map {

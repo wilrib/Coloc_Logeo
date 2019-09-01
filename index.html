@@ -84,6 +84,36 @@
             $window.on('scroll resize', check_if_in_view);
             $window.trigger('scroll');
         });
+
+        $(document).ready(function () {
+            $("#btn").click(function (e) {
+                var jsonData = {};
+
+                var formData = $("#myform").serializeArray();
+                // console.log(formData);
+
+                $.each(formData, function () {
+                    if (jsonData[this.name]) {
+                        if (!jsonData[this.name].push) {
+                            jsonData[this.name] = [jsonData[this.name]];
+                        }
+                        jsonData[this.name].push(this.value || '');
+                    } else {
+                        jsonData[this.name] = this.value || '';
+                    }
+
+
+                });
+                console.log(jsonData);
+                $.ajax({
+                    url: "action.php",
+                    type: "POST",
+                    data: jsonData,
+
+                });
+                e.preventDefault();
+            });
+        });
     </script>
 </head>
 
@@ -264,7 +294,7 @@
 
                             <figure class="wp-block-image is-resized"><img src="./img/Image_015.png" alt=""
                                     class="wp-image-274" width="448" height="117" /></figure>
-                            <p class="address_italic mention-map"><em>* Prix indiqué : loyer mensuel charges comprises
+                            <p class="mention-map"><em>* Prix indiqué : loyer mensuel charges comprises
                                     (eau, électricité, assurance habitation, internet) par personne</em></p>
                         </div>
                     </div>
@@ -279,16 +309,12 @@
                         <div class="animation-element slide-left content_map">
 
                             <div id="iframe-wrapper">
-                                <div id="iframe-placeholder">
-                                    <img id="iframe-img" src="./img/visite_2-min.png" alt="">
-                                </div>
+                                <div id="iframe-placeholder"></div>
                                 <iframe id="your-iframe" src=""></iframe>
                             </div>
 
                             <div id="iframe-wrapper-2">
-                                <div id="iframe-placeholder-2">
-                                    <img id="iframe-img-2" src="./img/visite_1-min.png" alt="">
-                                </div>
+                                <div id="iframe-placeholder-2"></div>
                                 <iframe id="your-iframe-2" src=""></iframe>
                             </div>
 
@@ -308,8 +334,8 @@
                             </div>
                             <div class="form-rgpd">
                                 <div class="formulaire">
-                                    <form method="post">
-                                        <table class="">
+                                    <form id="myform" type="post">
+                                        <table>
                                             <tbody>
                                                 <tr>
                                                     <th scope="row"><label>Nom :</label></th>
@@ -331,20 +357,20 @@
                                                 </tr>
                                                 <tr>
                                                     <th scope="row"><label>Votre demande :</label></th>
-                                                    <td><input name="choix_1" type="checkbox" id=""><label
-                                                            for="scales">Demande de
+                                                    <td><input name="choix[]" type="checkbox" id="ch1" value="Demande de
+                                colocation"><label for="scales">Demande de
                                                             colocation</label></td>
                                                 </tr>
                                                 <tr>
                                                     <th scope="row"></th>
-                                                    <td><input name="choix_2" type="checkbox" id=""><label
-                                                            for="scales">Demande de
+                                                    <td><input name="choix[]" type="checkbox" id="ch2" value="Demande de
+                                renseignements"><label for="scales">Demande de
                                                             renseignements</label></td>
                                                 </tr>
                                                 <tr>
                                                     <th scope="row"></th>
-                                                    <td><input name="choix_3" type="checkbox" id=""><label
-                                                            for="scales">Demande de
+                                                    <td><input name="choix[]" type="checkbox" id="ch3" value="Demande de
+                                rendez-vous"><label for="scales">Demande de
                                                             rendez-vous</label></td>
                                                 </tr>
                                                 <tr>
@@ -354,7 +380,8 @@
                                                 </tr>
                                                 <tr>
                                                     <th scope="row"></th>
-                                                    <td><button type="submit">Envoyer</button></textarea>
+                                                    <td><input type="submit" id="btn" name="btn" class="btn"
+                                                            value="Envoyer" />
                                                     </td>
                                                 </tr>
                                             </tbody>
@@ -512,7 +539,7 @@
     </div>
     </div>
     <footer class="blog-footer">
-        <p>Par <a href="http://www.williamribeiro.fr/">Wilrib</a>.</p>
+        <p>© 2019 <a href="http://www.williamribeiro.fr/">Wilrib</a>.</p>
     </footer>
 </body>
 

@@ -114,6 +114,14 @@ img#logo {
     text-align: center
 }
 
+.wp-image-274 {
+    width: 40% !important;
+}
+
+.address_italic {
+    margin-left: 15px;
+}
+
 /* Formulaire */
 span.wpcf7-form-control.wpcf7-radio {
     display: flex;
@@ -137,7 +145,9 @@ form input {
 .form-rgpd {
     display: flex;
     flex-direction: row;
-    justify-content: center
+    justify-content: center;
+    margin: auto;
+    width: fit-content;
 }
 
 #RGPD {
@@ -154,31 +164,28 @@ textarea {
     border: solid 1px #dee2e6;
 }
 
-button {
-    border: none;
-    border-radius: 2px !important;
-    padding: 5px 25px 8px 25px;
-}
-
-button:hover {
-    background-color: #ccc;
-}
-
 .formulaire {
     text-align: left;
+}
+
+.btn {
+    padding: 5px 25px 8px 25px !important;
+    border-radius: 2px !important;
+    background-color: #f5f5f5 !important;
 }
 
 /* Iframe */
 #your-iframe {
     display: block;
     margin-bottom: 30px;
-    width: -webkit-fill-available;
-    height: -webkit-fill-available;
+    width: inherit;
+    height: inherit;
 }
 
 #iframe-wrapper {
     position: relative;
-    height: 350px;
+    height: 60vh;
+    width: 100%;
 }
 
 #iframe-placeholder {
@@ -186,28 +193,25 @@ button:hover {
     width: 100%;
     height: 100%;
     cursor: pointer;
-}
-
-#iframe-placeholder img {
-    width: 100%;
-    height: inherit;
-}
-
-#iframe-img {
-    width: auto;
-    height: -webkit-fill-available;
+    background-image: url(./img/visite_2-min.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 #your-iframe-2 {
     display: block;
     margin-bottom: 30px;
-    width: -webkit-fill-available;
-    height: -webkit-fill-available;
+    width: inherit;
+    height: inherit;
 }
 
 #iframe-wrapper-2 {
     position: relative;
-    height: 350px;
+    height: 60vh;
+    width: 100%;
+    top: 40px;
+    margin-bottom: 80px;
 }
 
 #iframe-placeholder-2 {
@@ -215,17 +219,10 @@ button:hover {
     width: 100%;
     height: 100%;
     cursor: pointer;
-}
-
-#iframe-placeholder-2 img {
-    width: 100%;
-    height: inherit;
-
-}
-
-#iframe-img-2 {
-    width: auto;
-    height: -webkit-fill-available;
+    background-image: url(./img/visite_1-min.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 /*Animation dynamique*/
@@ -334,12 +331,6 @@ button:hover {
         transition: .3s ease all;
     }
 
-    /* .input-form {
-        border-radius: 4px;
-        border: solid 1px #8080806e;
-        margin-bottom: 10px;
-    } */
-
     .form-rgpd {
         display: flex;
         flex-direction: column-reverse;
@@ -347,5 +338,6 @@ button:hover {
 
     #RGPD {
         margin-left: 0;
+        margin-bottom: 20px
     }
 }

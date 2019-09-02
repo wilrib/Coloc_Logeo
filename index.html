@@ -338,45 +338,49 @@
                                             <tbody>
                                                 <tr>
                                                     <th scope="row"><label>Nom :</label></th>
-                                                    <td><input class="input-full" name="nom" type="text" required></td>
+                                                    <td><input class="input-full" name="name" type="text" id="name"
+                                                            required maxlength="20"></td>
                                                 </tr>
                                                 <tr>
                                                     <th scope="row"><label>Prénom :</label></th>
-                                                    <td><input class="input-full" name="prenom" type="text" required>
+                                                    <td><input class="input-full" name="firstname" type="text" required
+                                                            maxlength="20">
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <th scope="row"><label>Téléphone :</label></th>
-                                                    <td><input class="input-full" name="telephone" type="text"></td>
+                                                    <td><input class="input-full" name="phone" type="text"
+                                                            maxlength="20"></td>
                                                 </tr>
                                                 <tr>
                                                     <th scope="row"><label>Mail :</label></th>
-                                                    <td><input class="input-full" name="mail" type="email" required>
+                                                    <td><input class="input-full" name="mail" type="email" required
+                                                            maxlength="50">
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <th scope="row"><label>Votre demande :</label></th>
-                                                    <td><input name="choix[]" type="checkbox" id="ch1"
-                                                            value="Demande de colocation"><label for="scales">Demande de
+                                                    <td><input name="request_type" type="checkbox" id="ch1"
+                                                            value="coloc"><label for="scales">Demande de
                                                             colocation</label></td>
                                                 </tr>
                                                 <tr>
                                                     <th scope="row"></th>
-                                                    <td><input name="choix[]" type="checkbox" id="ch2"
-                                                            value="Demande de renseignements"><label
-                                                            for="scales">Demande de
+                                                    <td><input name="request_type" type="checkbox" id="ch2"
+                                                            value="info"><label for="scales">Demande de
                                                             renseignements</label></td>
                                                 </tr>
                                                 <tr>
                                                     <th scope="row"></th>
-                                                    <td><input name="choix[]" type="checkbox" id="ch3"
-                                                            value="Demande de rendez-vous"><label for="scales">Demande
+                                                    <td><input name="request_type" type="checkbox" id="ch3"
+                                                            value="rdv"><label for="scales">Demande
                                                             de
                                                             rendez-vous</label></td>
                                                 </tr>
                                                 <tr>
                                                     <th scope="row"><label>Détails de votre demande :</label></th>
-                                                    <td><textarea name="message" id="" cols="30" rows="5"></textarea>
+                                                    <td><textarea name="request_detail" id="" cols="30"
+                                                            rows="5" maxlength="500"></textarea>
                                                     </td>
                                                 </tr>
                                                 <tr>
@@ -388,20 +392,6 @@
                                             </tbody>
                                         </table>
                                     </form>
-                                    <!-- <?php
-                            if (isset($_POST['message'])) {
-                                $position_arobase = strpos($_POST['mail'], '@');
-                                if ($position_arobase === false)
-                                    echo '<p>Votre email doit comporter un arobase.</p>';
-                                else {
-                                    $retour = mail('contact@williamribeiro.fr', 'Envoi depuis page Contact', $_POST['message'] . $_POST['prenom'] . $_POST['choix_1'], 'From : ' . $_POST['mail']);
-                                    if ($retour)
-                                        echo '<p>Votre message a été envoyé.</p>';
-                                    else
-                                        echo '<p>Erreur.</p>';
-                                }
-                            }
-                            ?> -->
                                 </div>
 
                                 <div id="RGPD">

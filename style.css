@@ -205,6 +205,9 @@ textarea {
     width: inherit;
     height: inherit;
 }
+#success_message {
+    display: none;
+}
 
 #iframe-wrapper-2 {
     position: relative;

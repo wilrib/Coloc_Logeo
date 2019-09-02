@@ -21,99 +21,7 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.js"></script>
-    <script>
-        $(document).on("click", '[data-toggle="lightbox"]', function (event) {
-            event.preventDefault();
-            $(this).ekkoLightbox();
-        });
-
-        jQuery(document).ready(function () {
-            var yourIframe = document.getElementById('your-iframe');
-            var iframeLoader = document.getElementById('iframe-placeholder');
-            var iframeSrc = 'https://www.lookin3d.fr/visite-virtuelle/logeo-10-allee-davranches/fullscreen/'
-
-            iframeLoader.addEventListener('click', function () {
-                yourIframe.src = iframeSrc;
-                iframeLoader.parentNode.removeChild(iframeLoader);
-            }, false);
-        });
-
-        jQuery(document).ready(function () {
-            var yourIframe = document.getElementById('your-iframe-2');
-            var iframeLoader = document.getElementById('iframe-placeholder-2');
-            var iframeSrc = 'https://www.lookin3d.fr/visite-virtuelle/logeo-27-rue-amiral-courbet/fullscreen/'
-
-            iframeLoader.addEventListener('click', function () {
-                yourIframe.src = iframeSrc;
-                iframeLoader.parentNode.removeChild(iframeLoader);
-            }, false);
-        });
-
-        jQuery(document).ready(function () {
-            jQuery('#slideMe2').hide();
-            jQuery('a#clickMe2').click(function () {
-                jQuery('#slideMe2').slideToggle(400);
-                return false;
-            });
-        });
-
-        jQuery(document).ready(function () {
-            var $animation_elements = jQuery('.animation-element');
-            var $window = jQuery(window);
-
-            function check_if_in_view() {
-                var window_height = $window.height();
-                var window_top_position = $window.scrollTop();
-                var window_bottom_position = (window_top_position + window_height);
-
-                jQuery.each($animation_elements, function () {
-                    var $element = jQuery(this);
-                    var element_height = $element.outerHeight();
-                    var element_top_position = $element.offset().top;
-                    var element_bottom_position = (element_top_position + element_height);
-
-                    //check to see if this current container is within viewport
-                    if ((element_bottom_position >= window_top_position) &&
-                        (element_top_position <= window_bottom_position)) {
-                        $element.addClass('in-view');
-                    } else {
-                        $element.removeClass('in-view');
-                    }
-                });
-            }
-            $window.on('scroll resize', check_if_in_view);
-            $window.trigger('scroll');
-        });
-
-        $(document).ready(function () {
-            $("#btn").click(function (e) {
-                var jsonData = {};
-
-                var formData = $("#myform").serializeArray();
-
-                $.each(formData, function () {
-                    if (jsonData[this.name]) {
-                        if (!jsonData[this.name].push) {
-                            jsonData[this.name] = [jsonData[this.name]];
-                        }
-                        jsonData[this.name].push(this.value || '');
-                    } else {
-                        jsonData[this.name] = this.value || '';
-                    }
-
-
-                });
-                console.log(jsonData);
-                $.ajax({
-                    url: "action.php",
-                    type: "POST",
-                    data: jsonData,
-
-                });
-                e.preventDefault();
-            });
-        });
-    </script>
+    <script type="text/javascript" src="./javascript.js"></script>
 </head>
 
 <body>
@@ -337,12 +245,12 @@
                                         <table>
                                             <tbody>
                                                 <tr>
-                                                    <th scope="row"><label>Nom :</label></th>
+                                                    <th scope="row"><label>Nom* :</label></th>
                                                     <td><input class="input-full" name="name" type="text" id="name"
                                                             required maxlength="20"></td>
                                                 </tr>
                                                 <tr>
-                                                    <th scope="row"><label>Prénom :</label></th>
+                                                    <th scope="row"><label>Prénom* :</label></th>
                                                     <td><input class="input-full" name="firstname" type="text" required
                                                             maxlength="20">
                                                     </td>
@@ -353,13 +261,13 @@
                                                             maxlength="20"></td>
                                                 </tr>
                                                 <tr>
-                                                    <th scope="row"><label>Mail :</label></th>
+                                                    <th scope="row"><label>Mail* :</label></th>
                                                     <td><input class="input-full" name="mail" type="email" required
                                                             maxlength="50">
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <th scope="row"><label>Votre demande :</label></th>
+                                                    <th scope="row"><label>Votre demande* :</label></th>
                                                     <td><input name="request_type" type="checkbox" id="ch1"
                                                             value="coloc"><label for="scales">Demande de
                                                             colocation</label></td>
@@ -379,14 +287,14 @@
                                                 </tr>
                                                 <tr>
                                                     <th scope="row"><label>Détails de votre demande :</label></th>
-                                                    <td><textarea name="request_detail" id="" cols="30"
-                                                            rows="5" maxlength="500"></textarea>
+                                                    <td><textarea name="request_detail" id="" cols="30" rows="5"
+                                                            maxlength="500"></textarea>
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <th scope="row"></th>
                                                     <td><input type="submit" id="btn" name="btn" class="btn"
-                                                            value="Envoyer" />
+                                                            value="Envoyer" /><p>*Champs obligatoires</p>
                                                     </td>
                                                 </tr>
                                             </tbody>

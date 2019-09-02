@@ -245,12 +245,14 @@
                                         <table>
                                             <tbody>
                                                 <tr>
-                                                    <th scope="row"><label>Nom* :</label></th>
+                                                    <th scope="row"><label>Nom<span id="obligatoire">*</span> :</label>
+                                                    </th>
                                                     <td><input class="input-full" name="name" type="text" id="name"
                                                             required maxlength="20"></td>
                                                 </tr>
                                                 <tr>
-                                                    <th scope="row"><label>Prénom* :</label></th>
+                                                    <th scope="row"><label>Prénom<span id="obligatoire">*</span>
+                                                            :</label></th>
                                                     <td><input class="input-full" name="firstname" type="text" required
                                                             maxlength="20">
                                                     </td>
@@ -261,13 +263,15 @@
                                                             maxlength="20"></td>
                                                 </tr>
                                                 <tr>
-                                                    <th scope="row"><label>Mail* :</label></th>
+                                                    <th scope="row"><label>Mail<span id="obligatoire">*</span> :</label>
+                                                    </th>
                                                     <td><input class="input-full" name="mail" type="email" required
                                                             maxlength="50">
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <th scope="row"><label>Votre demande* :</label></th>
+                                                    <th scope="row"><label>Votre demande<span id="obligatoire">*</span>
+                                                            :</label></th>
                                                     <td><input name="request_type" type="checkbox" id="ch1"
                                                             value="coloc"><label for="scales">Demande de
                                                             colocation</label></td>
@@ -294,7 +298,8 @@
                                                 <tr>
                                                     <th scope="row"></th>
                                                     <td><input type="submit" id="btn" name="btn" class="btn"
-                                                            value="Envoyer" /><p>*Champs obligatoires</p>
+                                                            value="Envoyer" />
+                                                        <p id="obligatoire">*Champs obligatoires</p>
                                                     </td>
                                                 </tr>
                                             </tbody>

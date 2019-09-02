@@ -9,6 +9,8 @@
     <meta name="author" content="">
     <title>Coloc Logeo</title>
     <link href="./style.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
@@ -23,6 +25,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.js"></script>
     <script type="text/javascript" src="./javascript.js"></script>
 </head>
+
 
 <body>
     <div class="container-fluid">
@@ -450,6 +453,27 @@
     <footer class="blog-footer">
         <p>© 2019 <a href="http://www.williamribeiro.fr/">Wilrib</a>.</p>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+    <script>
+        window.cookieconsent.initialise({
+            "palette": {
+                "popup": {
+                    "background": "#edeff5",
+                    "text": "#838391"
+                },
+                "button": {
+                    "background": "transparent",
+                    "text": "#4b81e8",
+                    "border": "#4b81e8"
+                }
+            },
+            "showLink": false,
+            "content": {
+                "message": "Nous utilisons des cookies pour nous permettre de mieux comprendre comment le site est utilisé. En continuant à utiliser ce site, vous acceptez cette politique.",
+                "dismiss": "J'accepte"
+            }
+        });
+    </script>
 </body>
 
 </html>

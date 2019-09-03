@@ -12,6 +12,7 @@ div#background_img {
     width: 100%;
     animation: imageZoom 100s linear infinite;
     filter: saturate(1.5);
+    background-position: center;
 }
 
 img#logo {
@@ -73,6 +74,10 @@ img#logo {
     height: auto;
     transition: .3s ease all;
     margin-left: 35px;
+}
+
+.wp-block-image-2 img {
+    width: 97% !important;
 }
 
 .is-resized img {
@@ -320,6 +325,10 @@ textarea {
         height: auto;
         transition: .3s ease all;
         margin-left: 0px;
+    }
+
+    .wp-block-image-2 img {
+        width: 100% !important;
     }
 
     .wp-block-image-footer img {

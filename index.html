@@ -113,8 +113,7 @@
                             <h2>Dans les parties communes</h2>
 
                             <figure class="wp-block-image wp-block-image-2"><img src="./img/Image_004.png" alt=""
-                                    class="wp-image-273"
-                                    width="1024" height="410" /></figure>
+                                    class="wp-image-273" width="1024" height="410" /></figure>
 
                             <h2>Nos équipes à votre <strong>écoute</strong></h2>
 
@@ -263,8 +262,9 @@
                                                 </tr>
                                                 <tr>
                                                     <th scope="row"><label>Téléphone :</label></th>
-                                                    <td><input class="input-full" name="phone" type="text"
-                                                            maxlength="20"></td>
+                                                    <td><input class="input-full" name="phone" type="tel"
+                                                            pattern="[0-9]{10}" placeholder="0123456789"
+                                                            ></td>
                                                 </tr>
                                                 <tr>
                                                     <th scope="row"><label>Mail<span id="obligatoire">*</span> :</label>
@@ -277,7 +277,7 @@
                                                     <th scope="row"><label>Votre demande<span id="obligatoire">*</span>
                                                             :</label></th>
                                                     <td><input name="request_type" type="checkbox" id="ch1"
-                                                            value="coloc"><label for="scales">Demande de
+                                                            value="coloc" checked><label for="scales">Demande de
                                                             colocation</label></td>
                                                 </tr>
                                                 <tr>
